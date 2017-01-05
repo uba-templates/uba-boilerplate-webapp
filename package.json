@@ -1,0 +1,27 @@
+{
+  "name": "webapp",
+  "version": "0.0.1",
+  "description": "gulp jquery neoui jquery requirejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uba-templates/uba-boilerplate-webapp.git"
+  },
+  "keywords": [
+    "uba"
+  ],
+  "author": "YonyouFED",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uba-templates/uba-boilerplate-webapp/issues"
+  },
+  "homepage": "https://github.com/uba-templates/uba-boilerplate-webapp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-webserver": "^0.9.1"
+  }
+}
