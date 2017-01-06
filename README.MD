@@ -2,13 +2,14 @@
 
 ## 基于gulp + neoui + require.js + director.js构建webapp最佳实践
 
-1. start
+### 1. start
 ```
 $ npm install uba -g
 $ uba init
 $ npm install
 ```
-2. dev
+
+### 2. dev
 ```
 $ npm start
 ```
