@@ -6,7 +6,7 @@
 ```
 $ npm install uba -g
 $ uba init
-npm install
+$ npm install
 ```
 2. dev
 ```
