@@ -20,7 +20,8 @@ gulp.task('webserver', function() {
 
 gulp.task('mock', function() {
     gulp.src('.').pipe(mockServer({
-        port: 8080
+        port: 8080,
+        open: "http://localhost:8080/"
     }));
 });
 
