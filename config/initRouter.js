@@ -7,7 +7,6 @@ define(['../router/routers'], function(routers) {
                 var content = document.getElementById("content");
                 var filePath = "pages" + path + '.js';
                 requirejs.undef(filePath);
-                console.log(filePath);
                 require([filePath], function(module) {
                     ko.cleanNode(content);
                     content.innerHTML = "";
