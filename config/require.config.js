@@ -13,9 +13,11 @@ require.config({
         biz: "vendor/uui/js/u.biz",
         pages: "pages",
         scrollbarmin: "vendor/jquery.mCustomScrollbar.concat",
-        baseConfig: "config/base",
+        baseConfig: "config/baseConfig",
         initPage: "config/initPage",
-        addRouter: "config/addRouter"
+        addRouter: "config/addRouter",
+        slideBar: "config/slideBar",
+        loading: "config/loading"
     },
     shim: {
         'uui': {
@@ -31,4 +33,9 @@ require.config({
             deps: ["uui", "css!vendor/uui/css/tree.css"]
         }
     }
+});
+require(['jquery', 'knockout', 'director', 'baseConfig', 'addRouter'], function(jQuery, ko, director, baseConfig) {
+    window.router = Router();
+    window.ko = ko;
+    baseConfig.init();
 });

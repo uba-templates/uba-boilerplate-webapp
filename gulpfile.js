@@ -4,7 +4,7 @@ var mockServer = require('gulp-mock-server');
 
 
 gulp.task('watch', function() {
-    gulp.watch(['./*.html', './*/*.js'], ['html']);
+    gulp.watch(['./*.html', './*/*.js', './config/*.js'], ['html']);
 });
 gulp.task('html', function() {
     gulp.src('./*.html')
@@ -20,7 +20,7 @@ gulp.task('webserver', function() {
 
 gulp.task('mock', function() {
     gulp.src('.').pipe(mockServer({
-        port: 8080,
+        port: 8081,
         open: "http://localhost:8080/"
     }));
 });
