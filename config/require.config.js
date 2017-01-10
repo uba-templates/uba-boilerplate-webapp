@@ -15,6 +15,7 @@ require.config({
         scrollbarmin: "vendor/jquery.mCustomScrollbar.concat",
         baseConfig: "config/baseConfig",
         initPage: "config/initPage",
+        initRouter: "config/initRouter",
         addRouter: "config/addRouter",
         slideBar: "config/slideBar",
         loading: "config/loading"
@@ -34,8 +35,6 @@ require.config({
         }
     }
 });
-require(['jquery', 'knockout', 'director', 'baseConfig', 'addRouter'], function(jQuery, ko, director, baseConfig) {
-    window.router = Router();
-    window.ko = ko;
+require(['jquery', 'baseConfig'], function(jQuery, baseConfig) {
     baseConfig.init();
 });

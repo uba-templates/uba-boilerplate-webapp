@@ -1,5 +1,6 @@
-define(['./initPage', 'addRouter'], function(initPage) {
-    window.addRouter = function(path, func) {
+define(['initPage'], function(initPage) {
+    window.router = Router();
+    return function(path, func) {
         var pos = path.indexOf('/:');
         var truePath = path;
         if (pos != -1)
