@@ -1,4 +1,4 @@
-define(['jquery', 'knockout', 'initPage', 'slideBar', 'loading', 'initRouter', 'uui', 'director'], function(jQuery, ko, initPage, slideBar, loading, initRouter) {
+define(['jquery', 'knockout', 'initPage', 'slideBar', 'loading', 'initRouter', 'initMenu', 'uui', 'director'], function(jQuery, ko, initPage, slideBar, loading, initRouter, initMenu) {
     window.ctx = "/iuap-quickstart";
     //u.js使用全局对象对外暴露
     window.ko = ko;
@@ -13,6 +13,8 @@ define(['jquery', 'knockout', 'initPage', 'slideBar', 'loading', 'initRouter', '
             $.ajaxSetup({
                 cache: false
             });
+            //初始化菜单栏
+            initMenu();
             //初始化路由相关
             initRouter();
         }

@@ -1,9 +1,7 @@
 define(['../router/routers'], function(routers) {
     var routes = {};
     return function() {
-        initMenu();
         routers.forEach(function(item, index, input) {
-            //registerRouter("pages" + item.name);
             var path = item.name;
             routes[path] = function() {
                 var content = document.getElementById("content");
