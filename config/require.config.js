@@ -18,7 +18,8 @@ require.config({
         initRouter: "config/initRouter",
         addRouter: "config/addRouter",
         slideBar: "config/slideBar",
-        loading: "config/loading"
+        loading: "config/loading",
+        initMenu: "config/initMenu"
     },
     shim: {
         'uui': {

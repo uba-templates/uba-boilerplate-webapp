@@ -2,7 +2,6 @@ define(['jquery', 'knockout', 'initPage', 'slideBar', 'loading', 'initRouter', '
     window.ctx = "/iuap-quickstart";
     //u.js使用全局对象对外暴露
     window.ko = ko;
-    //window.router = Router();
     return {
         //初始化相关模块
         init: function() {

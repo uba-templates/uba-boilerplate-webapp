@@ -8,7 +8,7 @@ define(['text!pages/cardtable/cardtable.html', 'css!pages/cardtable/cardtable', 
         //var saveUrl = ctx+'/cardtablemeta/save';
 
         //mybtais持久化方式
-        var listUrl = './data/addresslist.json';
+        var listUrl = './data/cardtablelist.json';
         var delUrl = ctx + '/cardtable/del/';
         var saveUrl = ctx + '/cardtable/save';
         var viewModel = {
