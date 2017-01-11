@@ -6,7 +6,7 @@ define(['text!pages/user/user.html', 'pages/user/usermeta', 'css!pages/user/user
             var viewModel = {
                 draw: 1, //页数(第几页)
                 pageSize: 5,
-                searchURL: './data/list.json',
+                searchURL: ctx + '/sysUser/list',
                 addURL: ctx + "/sysUser/add",
                 updateURL: ctx + "/sysUser/update",
                 delURL: ctx + "/sysUser/delBatch",
@@ -120,9 +120,9 @@ define(['text!pages/user/user.html', 'pages/user/usermeta', 'css!pages/user/user
                         $.ajax({
                             type: 'get',
                             url: viewModel.searchURL,
-                            datatype: 'json',
+                            dataType: 'json',
                             data: jsonData,
-                            contentType: 'application/json;charset=utf-8',
+                            // contentType: 'application/json;charset=utf-8',
                             success: function(res) {
                                 if (res) {
                                     if (res.success == 'success') {
@@ -300,7 +300,7 @@ define(['text!pages/user/user.html', 'pages/user/usermeta', 'css!pages/user/user
                         $.ajax({
                             type: "post",
                             url: sendurl,
-                            contentType: 'application/json;charset=utf-8',
+                            //contentType: 'application/json;charset=utf-8',
                             data: JSON.stringify(jsondata), //将对象序列化成JSON字符串
                             success: function(res) {
                                 if (res) {
@@ -363,7 +363,7 @@ define(['text!pages/user/user.html', 'pages/user/usermeta', 'css!pages/user/user
                         $.ajax({
                             type: "post",
                             url: viewModel.delURL,
-                            contentType: 'application/json;charset=utf-8',
+                            //contentType: 'application/json;charset=utf-8',
                             data: JSON.stringify(jsonDel),
                             success: function(res) {
                                 if (res) {
@@ -440,7 +440,7 @@ define(['text!pages/user/user.html', 'pages/user/usermeta', 'css!pages/user/user
                         $.ajax({
                             type: "GET",
                             url: ajaxurl,
-                            contentType: 'application/json;charset=utf-8',
+                            //contentType: 'application/json;charset=utf-8',
                             dataType: 'json',
                             success: function(res) {
                                 if (res) {
@@ -521,10 +521,10 @@ define(['text!pages/user/user.html', 'pages/user/usermeta', 'css!pages/user/user
                         jsonData['search_userid'] = userId;
                         $.ajax({
                             type: 'GET',
-                            url: './data/listjob.json',
-                            datatype: 'json',
+                            url: ctx + '/sysUserJob/list',
+                            dataType: 'json',
                             data: jsonData,
-                            contentType: 'application/json;charset=utf-8',
+                            //contentType: 'application/json;charset=utf-8',
                             success: function(res) {
                                 if (res) {
                                     if (res.success == 'success') {
@@ -627,7 +627,7 @@ define(['text!pages/user/user.html', 'pages/user/usermeta', 'css!pages/user/user
                             $.ajax({
                                 type: "post",
                                 url: ctx + "/sysUserJob/del",
-                                contentType: 'application/json;charset=utf-8',
+                                //contentType: 'application/json;charset=utf-8',
                                 data: JSON.stringify(jsonDel[0]),
                                 success: function(res) {
                                     if (res) {
@@ -688,7 +688,7 @@ define(['text!pages/user/user.html', 'pages/user/usermeta', 'css!pages/user/user
                             $.ajax({
                                 type: "GET",
                                 url: ctx + '/sysUser/sysOrg/listall',
-                                contentType: 'application/json;charset=utf-8',
+                                //contentType: 'application/json;charset=utf-8',
                                 dataType: 'json',
                                 success: function(res) {
                                     if (res) {
@@ -755,7 +755,7 @@ define(['text!pages/user/user.html', 'pages/user/usermeta', 'css!pages/user/user
                         $.ajax({
                             type: "GET",
                             url: ctx + '/sysUserJob/dept/listall',
-                            contentType: 'application/json;charset=utf-8',
+                            //contentType: 'application/json;charset=utf-8',
                             dataType: 'json',
                             success: function(res) {
                                 if (res) {
@@ -783,9 +783,8 @@ define(['text!pages/user/user.html', 'pages/user/usermeta', 'css!pages/user/user
                         $.ajax({
                             type: "GET",
                             async: false,
-                            //url: ctx + '/sysUser/loadEnum',
-                            url: './data/loadEmun.json',
-                            contentType: 'application/json;charset=utf-8',
+                            url: ctx + '/sysUser/loadEnum',
+                            //contentType: 'application/json;charset=utf-8',
                             dataType: 'json',
                             success: function(res) {
                                 if (res) {

@@ -1,10 +1,10 @@
 define(['text!pages/addressBook/contacts.html', 'css!pages/addressBook/contacts', 'pages/addressBook/contactsmeta', 'uuitree', 'uuigrid'], function(html) {
     var init = function(element) {
-        var treelistUrl = './data/addresslist.json';
+        var treelistUrl = ctx + '/instit/list';
         var treedelUrl = ctx + '/instit/del/';
         var treesaveUrl = ctx + '/instit/save';
 
-        var tablelistUrl = './data/addresstablelist.json';
+        var tablelistUrl = ctx + '/telbook/list';
         var tabledelUrl = ctx + '/telbook/del/';
         var tablesaveUrl = ctx + '/telbook/save';
 
@@ -92,7 +92,7 @@ define(['text!pages/addressBook/contacts.html', 'css!pages/addressBook/contacts'
                         url: tablelistUrl,
                         dataType: 'json',
                         data: jsonData,
-                        contentType: 'application/json;charset=utf-8',
+                        //contentType: 'application/json;charset=utf-8',
                         success: function(res) {
                             if (res) {
                                 if (res.success == 'success') {
@@ -220,7 +220,7 @@ define(['text!pages/addressBook/contacts.html', 'css!pages/addressBook/contacts'
                         type: 'post',
                         url: treesaveUrl,
                         dataType: 'json',
-                        contentType: "application/json",
+                        //contentType: "application/json",
                         data: JSON.stringify(list),
                         success: function(res) {
                             if (res) {
@@ -266,7 +266,7 @@ define(['text!pages/addressBook/contacts.html', 'css!pages/addressBook/contacts'
                         data: json,
                         dataType: 'json',
                         type: 'post',
-                        contentType: 'application/json',
+                        //contentType: 'application/json',
                         success: function(res) {
                             if (res) {
                                 if (res.success == 'success') {
@@ -319,7 +319,7 @@ define(['text!pages/addressBook/contacts.html', 'css!pages/addressBook/contacts'
                         type: 'post',
                         url: tablesaveUrl,
                         dataType: 'json',
-                        contentType: "application/json",
+                        //contentType: "application/json",
                         data: JSON.stringify(list),
                         success: function(res) {
                             if (res) {
@@ -362,7 +362,7 @@ define(['text!pages/addressBook/contacts.html', 'css!pages/addressBook/contacts'
                         type: 'post',
                         url: tabledelUrl,
                         dataType: 'json',
-                        contentType: "application/json",
+                        //contentType: "application/json",
                         data: JSON.stringify(list),
                         success: function(res) {
                             if (res.success == 'success') {

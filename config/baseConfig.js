@@ -1,5 +1,5 @@
 define(['jquery', 'knockout', 'initPage', 'slideBar', 'loading', 'initRouter', 'initMenu', 'uui', 'director'], function(jQuery, ko, initPage, slideBar, loading, initRouter, initMenu) {
-    window.ctx = "/iuap-quickstart";
+    window.ctx = "http://localhost:8989";
     //u.js使用全局对象对外暴露
     window.ko = ko;
     return {
