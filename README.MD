@@ -24,9 +24,9 @@ $ npm install
 $ npm start
 ```
 
-启动完毕后打开`http://localhost:9000/`来进行访问。
+启动完毕后打开`http://localhost:8080/`来进行访问。
 
-** 服务端口可以修改 `package.json` 下的 `"start": "dora -p 9000 --plugins 'proxy?port=8989'"` 来更改，代理服务器端口也从这里修改 **
+** 代理端口可以修改 `package.json` 下的 `"start": "dora -p 9000 --plugins 'proxy?port=8989'"` port=端口来更改，代理服务器端口也从这里修改 **
 
 代理服务端口默认为：`8989`
 
