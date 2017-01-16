@@ -10,6 +10,7 @@ gulp.task('html', function() {
         .pipe(connect.reload());
 });
 gulp.task('webserver', function() {
+    console.log("服务启动完毕");
     connect.server({
         livereload: true,
         root: './'
@@ -25,7 +26,7 @@ gulp.task('webserver', function() {
             console.error('`npm ' + args.join(' ') + '` failed');
             return;
         }
-        console.log("代理服务启动完毕");
+
     });
 
 });
