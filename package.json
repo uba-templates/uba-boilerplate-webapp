@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "proxy": "dora -p 9000 --plugins 'proxy?port=8989'"
+    "proxy": "dora -p 9000 --plugins proxy?port=8989"
   },
   "repository": {
     "type": "git",
